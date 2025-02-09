@@ -1,0 +1,15 @@
+apiVersion: grafanaalloy.com/v1alpha1
+kind: GrafanaAlloyClaim
+metadata:
+  name: grafana-alloy-demo
+  labels:
+    app-owner: devops-team
+spec:
+  id: grafana-alloy-demo
+  compositionSelector:
+    matchLabels:
+      type: grafaalloy
+  parameters:
+    namespace: grafana-alloy
+    image: grafana/alloy:v1.6.1
+    host: localhost
